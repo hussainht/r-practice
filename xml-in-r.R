@@ -1,4 +1,5 @@
 library(XML)
+<<<<<<< HEAD
 filename <- "files/simple.xml"
 doc <- xmlTreeParse(filename,useInternal = TRUE)
 rootnode <- xmlRoot(doc)
@@ -20,3 +21,9 @@ df <- data.frame(names)
 df$prices <- xpathSApply(rootnode,"//price",xmlValue)
 df$description <- xpathSApply(rootnode,"//description",xmlValue)
 df$calories <- xpathSApply(rootnode,"//calories",xmlValue)
+=======
+filename <- "simple.xml"
+doc <- xmlTreeParse(filename,useInternal = TRUE)
+rootnode <- xmlRoot(doc)
+xmlName(rootnode)
+>>>>>>> 4543606c17a1810753d2d3840f496ecc6e58e710
